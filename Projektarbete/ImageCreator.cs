@@ -34,14 +34,5 @@ namespace Projektarbete
             return bm;
         }
 
-        public Bitmap CreateBmpImage2()
-        {
-            //Ett bitmap-objekt med den angivna storleken skapas.
-            Bitmap bm = new Bitmap(width, height);
-
-            
-            //Returnera bitmappen som innehåller din bild.
-            return bm;
-        }
     }
 }

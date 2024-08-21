@@ -17,21 +17,16 @@ namespace Projektarbete
             InitializeComponent();
         }
 
-        private void CreateImage(int type)
+        private void CreateImage()
         {
             //Skapa ett objekt av vår egen klass ImageCreator. 
             //Använd samma storlek som vår PictureBox, dvs 600x600 pixels.
             ImageCreator imageCreator = new ImageCreator(pictureBox1.Width, pictureBox1.Height);
             //Anropa metoden CreateBmpImage() som skapar en bitmap.
             Bitmap bitmap;
-            if (type == 1)
-            {
-                bitmap = imageCreator.CreateBmpImage();
-            }
-            else
-            {
-                bitmap = imageCreator.CreateBmpImage2();
-            }
+
+            bitmap = imageCreator.CreateBmpImage();
+
             //Skapa ett grafikobjekt som är kopplat till vår PictureBox.
             Graphics graphics = pictureBox1.CreateGraphics();
             //Rita ut bitmapen på grafikobjektet så att det syns på skärmen.
@@ -43,12 +38,8 @@ namespace Projektarbete
         private void buttonDraw_Click(object sender, EventArgs e)
         {
             //När man klickar på knappen anropas metoden CreateImage()
-            CreateImage(1);
+            CreateImage();
         }
 
-        private void buttonRita2_Click(object sender, EventArgs e)
-        {
-            CreateImage(2);
-        }
     }
 }
